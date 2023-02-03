@@ -15,7 +15,7 @@ onscroll = function () {
 };
 
 var removeActiveAllClass = function () {
-  document.querySelectorAll('nav div ul li a').forEach(el => {
+  document.querySelectorAll('nav div ul li ').forEach(el => {
     el.classList.remove('active');
   });
 };
