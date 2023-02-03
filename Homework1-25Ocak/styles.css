@@ -95,6 +95,10 @@ nav li a {
   color: #e3b6a6;
   font-family: var(--bs-font-sans-serif);
 }
+
+nav li a:hover {
+  color: whitesmoke;
+}
 .active {
   color: #fff;
 }
