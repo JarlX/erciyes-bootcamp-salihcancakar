@@ -1281,42 +1281,46 @@ var customersNew = Object.values(customers); // Array yapıldı.
 
 /////////////////////////////////////////////////////////////////////                        MAIN TABLE
 /////////////////////////////////////////////////////////////////////
-customersNew.forEach(customer => {
-  let trCustomers = document.createElement('tr');
+let fCustomersNew = () => {
+  customersNew.forEach(customer => {
+    let trCustomers = document.createElement('tr');
 
-  let tdId = document.createElement('td');
-  tdId.innerHTML = customer.id;
+    let tdId = document.createElement('td');
+    tdId.innerHTML = customer.id;
 
-  let tdCompName = document.createElement('td');
-  tdCompName.innerHTML = customer.companyName;
+    let tdCompName = document.createElement('td');
+    tdCompName.innerHTML = customer.companyName;
 
-  let tdConName = document.createElement('td');
-  tdConName.innerHTML = customer.contactName;
+    let tdConName = document.createElement('td');
+    tdConName.innerHTML = customer.contactName;
 
-  let tdCity = document.createElement('td');
-  tdCity.innerHTML = customer.address.city;
+    let tdCity = document.createElement('td');
+    tdCity.innerHTML = customer.address.city;
 
-  let tdCountry = document.createElement('td');
-  tdCountry.innerHTML = customer.address.country;
+    let tdCountry = document.createElement('td');
+    tdCountry.innerHTML = customer.address.country;
 
-  let tdPhone = document.createElement('td');
-  tdPhone.innerHTML = customer.address.phone
-    .replaceAll('(', ' ')
-    .replaceAll(')', ' ')
-    .replaceAll('.', ' ')
-    .replaceAll('-', ' ')
-    .split(' ')
-    .join('');
+    let tdPhone = document.createElement('td');
+    tdPhone.innerHTML = customer.address.phone
+      .replaceAll('(', ' ')
+      .replaceAll(')', ' ')
+      .replaceAll('.', ' ')
+      .replaceAll('-', ' ')
+      .split(' ')
+      .join('');
 
-  trCustomers.appendChild(tdId);
-  trCustomers.appendChild(tdCompName);
-  trCustomers.appendChild(tdConName);
-  trCustomers.appendChild(tdCity);
-  trCustomers.appendChild(tdCountry);
-  trCustomers.appendChild(tdPhone);
+    trCustomers.appendChild(tdId);
+    trCustomers.appendChild(tdCompName);
+    trCustomers.appendChild(tdConName);
+    trCustomers.appendChild(tdCity);
+    trCustomers.appendChild(tdCountry);
+    trCustomers.appendChild(tdPhone);
 
-  document.getElementById('customers').appendChild(trCustomers);
-});
+    document.getElementById('customers').appendChild(trCustomers);
+  });
+};
+
+fCustomersNew();
 /////////////////////////////////////////////
 
 let tdCount = document.createElement('th');
@@ -1388,44 +1392,10 @@ document.getElementById('aCustomer').addEventListener('click', () => {
     customerA.removeAttribute('id', 'filteredCustomer');
     customerA.setAttribute('id', 'aCustomer');
     document.getElementById('customers').innerHTML = '';
-    customersNew.forEach(customer => {
-      let trCustomers = document.createElement('tr');
 
-      let tdId = document.createElement('td');
-      tdId.innerHTML = customer.id;
+    fCustomersNew();
 
-      let tdCompName = document.createElement('td');
-      tdCompName.innerHTML = customer.companyName;
-
-      let tdConName = document.createElement('td');
-      tdConName.innerHTML = customer.contactName;
-
-      let tdCity = document.createElement('td');
-      tdCity.innerHTML = customer.address.city;
-
-      let tdCountry = document.createElement('td');
-      tdCountry.innerHTML = customer.address.country;
-
-      let tdPhone = document.createElement('td');
-      tdPhone.innerHTML = customer.address.phone
-        .replaceAll('(', ' ')
-        .replaceAll(')', ' ')
-        .replaceAll('.', ' ')
-        .replaceAll('-', ' ')
-        .split(' ')
-        .join('');
-
-      trCustomers.appendChild(tdId);
-      trCustomers.appendChild(tdCompName);
-      trCustomers.appendChild(tdConName);
-      trCustomers.appendChild(tdCity);
-      trCustomers.appendChild(tdCountry);
-      trCustomers.appendChild(tdPhone);
-
-      document.getElementById('customers').appendChild(trCustomers);
-
-      tdCount.innerHTML = Object.values(customersNew).length;
-    });
+    tdCount.innerHTML = Object.values(customersNew).length;
   });
 });
 
@@ -1497,44 +1467,9 @@ document.getElementById('ukCustomer').addEventListener('click', () => {
       customerUK.setAttribute('id', 'ukCustomer');
       document.getElementById('customers').innerHTML = '';
 
-      customersNew.forEach(customer => {
-        let trCustomers = document.createElement('tr');
+      fCustomersNew();
 
-        let tdId = document.createElement('td');
-        tdId.innerHTML = customer.id;
-
-        let tdCompName = document.createElement('td');
-        tdCompName.innerHTML = customer.companyName;
-
-        let tdConName = document.createElement('td');
-        tdConName.innerHTML = customer.contactName;
-
-        let tdCity = document.createElement('td');
-        tdCity.innerHTML = customer.address.city;
-
-        let tdCountry = document.createElement('td');
-        tdCountry.innerHTML = customer.address.country;
-
-        let tdPhone = document.createElement('td');
-        tdPhone.innerHTML = customer.address.phone
-          .replaceAll('(', ' ')
-          .replaceAll(')', ' ')
-          .replaceAll('.', ' ')
-          .replaceAll('-', ' ')
-          .split(' ')
-          .join('');
-
-        trCustomers.appendChild(tdId);
-        trCustomers.appendChild(tdCompName);
-        trCustomers.appendChild(tdConName);
-        trCustomers.appendChild(tdCity);
-        trCustomers.appendChild(tdCountry);
-        trCustomers.appendChild(tdPhone);
-
-        document.getElementById('customers').appendChild(trCustomers);
-
-        tdCount.innerHTML = Object.values(customersNew).length;
-      });
+      tdCount.innerHTML = Object.values(customersNew).length;
     });
 });
 
@@ -1604,44 +1539,9 @@ document.getElementById('sortCompany').addEventListener('click', () => {
     companySort.setAttribute('id', 'sortCompany');
     document.getElementById('customers').innerHTML = '';
 
-    customersNew.forEach(customer => {
-      let trCustomers = document.createElement('tr');
+    fCustomersNew();
 
-      let tdId = document.createElement('td');
-      tdId.innerHTML = customer.id;
-
-      let tdCompName = document.createElement('td');
-      tdCompName.innerHTML = customer.companyName;
-
-      let tdConName = document.createElement('td');
-      tdConName.innerHTML = customer.contactName;
-
-      let tdCity = document.createElement('td');
-      tdCity.innerHTML = customer.address.city;
-
-      let tdCountry = document.createElement('td');
-      tdCountry.innerHTML = customer.address.country;
-
-      let tdPhone = document.createElement('td');
-      tdPhone.innerHTML = customer.address.phone
-        .replaceAll('(', ' ')
-        .replaceAll(')', ' ')
-        .replaceAll('.', ' ')
-        .replaceAll('-', ' ')
-        .split(' ')
-        .join('');
-
-      trCustomers.appendChild(tdId);
-      trCustomers.appendChild(tdCompName);
-      trCustomers.appendChild(tdConName);
-      trCustomers.appendChild(tdCity);
-      trCustomers.appendChild(tdCountry);
-      trCustomers.appendChild(tdPhone);
-
-      document.getElementById('customers').appendChild(trCustomers);
-
-      tdCount.innerHTML = Object.values(customersNew).length;
-    });
+    tdCount.innerHTML = Object.values(customersNew).length;
   });
 });
 
@@ -1704,49 +1604,14 @@ document.getElementById('findDumonButton').addEventListener('click', () => {
   });
 
   document.getElementById('normalDumon').addEventListener('click', () => {
-    companySort.innerHTML = 'DUMON ID Getir';
-    companySort.removeAttribute('id', 'normalDumon');
-    companySort.setAttribute('id', 'findDumonButton');
+    findDumonB.innerHTML = 'DUMON ID Getir';
+    findDumonB.removeAttribute('id', 'normalDumon');
+    findDumonB.setAttribute('id', 'findDumonButton');
     document.getElementById('customers').innerHTML = '';
 
-    customersNew.forEach(customer => {
-      let trCustomers = document.createElement('tr');
+    fCustomersNew();
 
-      let tdId = document.createElement('td');
-      tdId.innerHTML = customer.id;
-
-      let tdCompName = document.createElement('td');
-      tdCompName.innerHTML = customer.companyName;
-
-      let tdConName = document.createElement('td');
-      tdConName.innerHTML = customer.contactName;
-
-      let tdCity = document.createElement('td');
-      tdCity.innerHTML = customer.address.city;
-
-      let tdCountry = document.createElement('td');
-      tdCountry.innerHTML = customer.address.country;
-
-      let tdPhone = document.createElement('td');
-      tdPhone.innerHTML = customer.address.phone
-        .replaceAll('(', ' ')
-        .replaceAll(')', ' ')
-        .replaceAll('.', ' ')
-        .replaceAll('-', ' ')
-        .split(' ')
-        .join('');
-
-      trCustomers.appendChild(tdId);
-      trCustomers.appendChild(tdCompName);
-      trCustomers.appendChild(tdConName);
-      trCustomers.appendChild(tdCity);
-      trCustomers.appendChild(tdCountry);
-      trCustomers.appendChild(tdPhone);
-
-      document.getElementById('customers').appendChild(trCustomers);
-
-      tdCount.innerHTML = Object.values(customersNew).length;
-    });
+    tdCount.innerHTML = Object.values(customersNew).length;
   });
 });
 
@@ -1812,51 +1677,17 @@ document.getElementById('findPhoneButton').addEventListener('click', () => {
   });
 
   document.getElementById('normalPhone').addEventListener('click', () => {
-    companySort.innerHTML = '1 İle Başlayan Getir';
-    companySort.removeAttribute('id', 'normalPhone');
-    companySort.setAttribute('id', 'findPhoneButton');
+    findPhoneB.innerHTML = '1 İle Başlayan Getir';
+    findPhoneB.removeAttribute('id', 'normalPhone');
+    findPhoneB.setAttribute('id', 'findPhoneButton');
     document.getElementById('customers').innerHTML = '';
 
-    customersNew.forEach(customer => {
-      let trCustomers = document.createElement('tr');
+    fCustomersNew();
 
-      let tdId = document.createElement('td');
-      tdId.innerHTML = customer.id;
-
-      let tdCompName = document.createElement('td');
-      tdCompName.innerHTML = customer.companyName;
-
-      let tdConName = document.createElement('td');
-      tdConName.innerHTML = customer.contactName;
-
-      let tdCity = document.createElement('td');
-      tdCity.innerHTML = customer.address.city;
-
-      let tdCountry = document.createElement('td');
-      tdCountry.innerHTML = customer.address.country;
-
-      let tdPhone = document.createElement('td');
-      tdPhone.innerHTML = customer.address.phone
-        .replaceAll('(', ' ')
-        .replaceAll(')', ' ')
-        .replaceAll('.', ' ')
-        .replaceAll('-', ' ')
-        .split(' ')
-        .join('');
-
-      trCustomers.appendChild(tdId);
-      trCustomers.appendChild(tdCompName);
-      trCustomers.appendChild(tdConName);
-      trCustomers.appendChild(tdCity);
-      trCustomers.appendChild(tdCountry);
-      trCustomers.appendChild(tdPhone);
-
-      document.getElementById('customers').appendChild(trCustomers);
-
-      tdCount.innerHTML = Object.values(customersNew).length;
-    });
+    tdCount.innerHTML = Object.values(customersNew).length;
   });
 });
+
 /////////////////////////////////////////////////////////////////////                        BUTTONS FINISH
 /////////////////////////////////////////////////////////////////////
 
@@ -1912,7 +1743,7 @@ let phoneFiltered = customers.filter(x =>
 
 console.log('Telefon numarası 1 ile başlayanları console a yaz', phoneFiltered);
 
-//8) ***** Telefon numaralarını console a aşağıdaki formatta yaz (4065555834)
+//8) ***** TelfindPhoneBlarını console a aşağıdaki formatta yaz (4065555834)
 let phone5 = [];
 let phone6 = customers.forEach(item => {
   phone5.push(
