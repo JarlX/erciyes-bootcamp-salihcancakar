@@ -1,4 +1,6 @@
 body {
+  width: 100vw;
+  height: 100vh;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     330deg,
@@ -6,6 +8,7 @@ body {
     rgba(111, 111, 176, 1) 48%,
     rgba(15, 15, 107, 1) 100%
   );
+  background-repeat: no-repeat;
 }
 
 .container {
