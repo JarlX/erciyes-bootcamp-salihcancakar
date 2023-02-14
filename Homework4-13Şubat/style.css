@@ -1,0 +1,43 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    330deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(111, 111, 176, 1) 48%,
+    rgba(15, 15, 107, 1) 100%
+  );
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section {
+  /* border: 2px solid black; */
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
