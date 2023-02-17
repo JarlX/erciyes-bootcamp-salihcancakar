@@ -1,0 +1,28 @@
+{
+  "people": [
+    {
+      "img": "https://www.w3schools.com/w3images/team2.jpg",
+      "name": "John Doe",
+      "job": "CEO & Founder",
+      "description": "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+    },
+    {
+      "img": "https://www.w3schools.com/w3images/team1.jpg",
+      "name": "Jane Doe",
+      "job": "Architect",
+      "description": "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+    },
+    {
+      "img": "https://www.w3schools.com/w3images/team3.jpg",
+      "name": "Mike Ross",
+      "job": "Architect",
+      "description": ""
+    },
+    {
+      "img": "https://www.w3schools.com/w3images/team4.jpg",
+      "name": "Dan Star",
+      "job": "Architect",
+      "description": "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+    }
+  ]
+}
