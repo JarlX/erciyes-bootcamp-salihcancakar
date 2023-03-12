@@ -1,33 +1,33 @@
-import Home from "../views/Home/Home";
-import CatAdd from "../views/Content/CatAdd";
-import CatDetail from "../views/Content/CatDetail";
-import CatUpdate from "../views/Content/CatUpdate";
-import CatList from "../views/Content/CatList";
-import Login from "../views/Auth/Login";
+import Home from '../views/Home/Home';
+import CatAdd from '../views/Content/CatAdd';
+import CatDetail from '../views/Content/CatDetail';
+import CatUpdate from '../views/Content/CatUpdate';
+import CatList from '../views/Content/CatList';
+import Login from '../views/Auth/Login';
 
 export const routes = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/add",
+    path: '/category/add',
     element: <CatAdd />,
   },
   {
-    path: "/category/detail/:id",
+    path: '/category/detail/:id',
     element: <CatDetail />,
   },
   {
-    path: "/category/update/:id",
+    path: '/category/update/:id',
     element: <CatUpdate />,
   },
   {
-    path: "/categoryList",
+    path: '/categoryList',
     element: <CatList />,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <Login />,
   },
 ];
